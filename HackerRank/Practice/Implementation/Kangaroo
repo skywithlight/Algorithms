@@ -1,0 +1,27 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+string kangaroo(int x1, int v1, int x2, int v2) {
+     unsigned long long count = 0, j = x2, i = x1;
+     while (count < 10000){
+         if (i == j){
+             return "YES";
+         }
+         j += v2;
+         i += v1;
+         count++;
+     }
+    return "NO";
+}
+
+int main() {
+    int x1;
+    int v1;
+    int x2;
+    int v2;
+    cin >> x1 >> v1 >> x2 >> v2;
+    string result = kangaroo(x1, v1, x2, v2);
+    cout << result << endl;
+    return 0;
+}
