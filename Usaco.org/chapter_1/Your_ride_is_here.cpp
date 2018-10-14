@@ -15,19 +15,19 @@ int main(){
     string n, m;
     cin >> n >> m;
 
-    int pro1 = 1, pro2 = 1;
+    int prod1 = 1, prod2 = 1;
 
     for (int i = 0; i < n.size(); i++){
         int tem = n[i];
-        pro1 *= (tem - 64);
+        prod1 *= (tem - 64);
     }
 
     for (int i = 0; i < m.size(); i++){
         int tem = m[i];
-        pro2 *= (tem - 64);
+        prod2 *= (tem - 64);
     }
 
-    if (pro1 % 47 == pro2 % 47)
+    if (prod1 % 47 == prod2 % 47)
         cout << "GO" << endl;
     else 
         cout << "STAY" << endl;
